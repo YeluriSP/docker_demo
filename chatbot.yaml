@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+
+  valkey:
+    image: valkey/valkey:latest
+    container_name: valkey_db
+    ports:
+      - "6379:6379"
+    volumes:
+      - chatbot_vol:/data
+    networks:
+      - simple_chat_network
+
+  chatbot:
+    build: .
+    container_name: chatbot_app
+    ports:
+      - "8082:8082"
+    env_file:
+      - .env
+    depends_on:
+      - valkey
+    networks:
+      - simple_chat_network
+
+networks:
+  simple_chat_network:
+    name: simple_chat_network
+
+volumes:
+  chatbot_vol:
