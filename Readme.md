@@ -1,6 +1,6 @@
 # Simple Chatbot (Docker + Valkey + OpenAI)
 
-## 🚀 Setup
+## Setup
 
 ### 1. Clone repo
 
@@ -41,7 +41,7 @@ http://localhost:8082
 
 ---
 
-## 🧱 Tech Stack
+## Tech Stack
 
 * Streamlit
 * OpenAI API
