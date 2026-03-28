@@ -6,7 +6,7 @@
 
 ```bash
 git clone <your-repo>
-cd simple-chatbot
+cd docker_demo
 ```
 
 ### 2. Create env file
